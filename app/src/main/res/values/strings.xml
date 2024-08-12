@@ -1,3 +1,22 @@
 <resources>
-    <string name="app_name">InternTasks3A</string>
+    <string name="app_name">InternTasks-3A</string>
+    <string name="question_mark_name">{?}</string>
+    <string name="guessing_name">Tahmin Et</string>
+    <string name="zero_button_name">0</string>
+    <string name="one_button_name">1</string>
+    <string name="two_button_name">2</string>
+    <string name="three_button_name">3</string>
+    <string name="four_button_name">4</string>
+    <string name="five_button_name">5</string>
+    <string name="six_button_name">6</string>
+    <string name="seven_button_name">7</string>
+    <string name="eight_button_name">8</string>
+    <string name="nine_button_name">9</string>
+    <string name="clear_button_name">Clear</string>
+    <string name="guess_button_name">Guess</string>
+    <string name="go_counter_name">Go Counter</string>
+    <string name="go_game_name">Go Game</string>
+    <string name="ıncrease_counter_name">Increase Counter</string>
+    <string name="use_viewmodel_name">Use ViewModel</string>
+
 </resources>
