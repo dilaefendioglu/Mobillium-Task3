@@ -28,9 +28,7 @@ class MainActivity : AppCompatActivity() {
             when (destination.id) {
                 R.id.simpleFragment -> {
                     supportActionBar?.title = "Counter"
-
                 }
-
                 R.id.guessNumberFragment -> {
                     supportActionBar?.title = "Game"
                 }

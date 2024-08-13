@@ -5,8 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import com.dilaefendioglu.interntasks_3a.Constants
 import com.dilaefendioglu.interntasks_3a.R
 import com.dilaefendioglu.interntasks_3a.databinding.FragmentGuessNumberBinding
 
@@ -31,16 +33,17 @@ class GuessNumberFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Sayı butonlarını toplu şekilde aldık ve dinleyicileri ekledik
-        val buttonIds = listOf(
+        val numberButtons = listOf(
             binding.zeroButton, binding.oneButton, binding.twoButton, binding.threeButton,
             binding.fourButton, binding.fiveButton, binding.sixButton, binding.sevenButton,
             binding.eightButton, binding.nineButton
         )
 
-        buttonIds.forEach { button ->
-            numberButtons.add(button)
-            button.setOnClickListener { onNumberClick(button.text.toString()) }
+        numberButtons.forEach { button ->
+            button.setOnClickListener {
+                val number = (it as Button).text.toString()
+                onNumberClick(number)
+            }
         }
 
         // Tahmin butonuna tıklama dinleyicisi
@@ -67,9 +70,10 @@ class GuessNumberFragment : Fragment() {
     }
 
     private fun onNumberClick(number: String) {
-        // Kullanıcının tahminini oluştur
-        if (guessBuilder.length < 1) { // Tek haneli tahmin için
+        if (guessBuilder.length < 1) { // Tek haneli tahmin için tahmin olsutuurr
             guessBuilder.append(number)
+            // Butonun numarasını TextView'a yaz
+            binding.infoTv.text = guessBuilder.toString()
         }
     }
 
@@ -97,7 +101,7 @@ class GuessNumberFragment : Fragment() {
 
     private fun navigateToDetailFragment(randomNumber: Int) {
         val bundle = Bundle().apply {
-            putInt("randomNumber", randomNumber)
+            putInt(Constants.RANDOM_NUMBER, randomNumber)
         }
         findNavController().navigate(R.id.action_guessNumberFragment_to_detailFragment, bundle)
     }

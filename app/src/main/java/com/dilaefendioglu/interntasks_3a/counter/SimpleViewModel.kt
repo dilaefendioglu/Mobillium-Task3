@@ -14,6 +14,7 @@ class SimpleViewModel : ViewModel() {
         //sayacı bir artırır.yeni sayac değerini countera atar.
         _counter.value = (_counter.value ?: 0) + 1
     }
+
     fun resetCounter() {
         _counter.value = 0
     }

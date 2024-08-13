@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,14 +11,14 @@
         android:id="@+id/counterTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/spacing_normal"
+        android:layout_marginBottom="@dimen/spacing_small"
         android:text="@string/zero_button_name"
         android:textSize="@dimen/text_size_normal"
         app:layout_constraintBottom_toTopOf="@+id/incrementButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:layout_marginBottom="@dimen/spacing_small"
-        android:layout_marginTop="@dimen/spacing_normal"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/incrementButton"
@@ -34,11 +33,11 @@
         android:id="@+id/switchMode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/use_viewmodel_name"
-        android:padding="16dp"
-        android:layout_marginEnd="@dimen/spacing_small"
         android:layout_marginTop="@dimen/spacing_small"
+        android:layout_marginEnd="@dimen/spacing_small"
+        android:padding="16dp"
+        android:text="@string/use_viewmodel_name"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
